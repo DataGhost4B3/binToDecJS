@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./BinToDec.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BINARY TO DECIMAL CONVERTER</h1>
+    <button id="attack">CLICK TO SHOW PROMPT</button>
+
+    <script type="text/javascript" src="./BinToDec.js"></script>
+    <script>
+        document.getElementById("attack").addEventListener("click", inuin);
+        
+        function inuin() {
+            let uin = prompt("Please enter base2 number: ");
+
+             //try-catch-finally statement to attempt carrying out the conversion using the defined functions
+            try {
+                alert(bintodec(uin));
+            } catch (e) {   //incase exception is thrown by try statement, pass it to a parameter 'e' to handle it
+                if (e instanceof TypeError) alert("You chose to abort.");
+                else alert(e);
+            } finally {
+                alert("Thank you for using this application! \u{1F604}");   //Thanking the user for using the application
+            }
+        }
+
+    </script>
+</body>
+</html>
